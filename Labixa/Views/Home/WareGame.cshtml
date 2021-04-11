@@ -1,0 +1,57 @@
+﻿@model Labixa.Controllers.Root
+@{
+    ViewBag.Title = "WareGame";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts{}
+
+<style>
+    @@media(min-width:419px) and (max-width:767px) {
+        .mybtn2 {
+            bottom: 0px;
+        }
+
+        .single-game {
+            padding: 30px;
+            padding-bottom: 300px;
+        }
+    }
+</style>
+
+<div class="games game-page" style="background: #070b28">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12" style="margin-top: 50px;">
+                <div class="all-games anim-change">
+                    <div class="title-cover">
+                        <h4 class="games-title"><span class="icon icon-1"></span>Games Live</h4>
+                    </div>
+                    <div class="row miscoo-row">
+                        @foreach (var item in Model.games)
+                        {
+                            if (item.MerchantID == "998")
+                            {
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="single-game">
+                                        <div class="part-img">
+                                            <img src="@item.ImageFullPath" alt="">
+                                        </div>
+                                        <a href="/home/GameDetail?ID=@item.PageCode&System=@item.MerchantID">
+                                            <div class="part-text">
+                                                <h4 class="game-title">
+                                                    @item.Name.en
+                                                </h4>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Action("getBannerPlaynow", "Home")
+

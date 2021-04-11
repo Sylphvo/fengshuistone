@@ -1,0 +1,34 @@
+﻿@{
+    HttpCookie cookie = Request.Cookies["_culture"];
+}
+@model IEnumerable<Outsourcing.Data.Models.WebsiteAttribute>
+
+
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <div class="home1-slide-item swiper-slide" data-swiper-autoplay="5000" data-bg-image="@item.LinkUrl">
+            <div class="home1-slide1-content">
+                <span class="bg"></span>
+                <span class="slide-border"></span>
+                <span class="icon"><img src="/Content/TueDuc/assets/images/slider/home1/slide-1-1.png" alt="Slide Icon"></span>
+                @if (cookie.Value == "vi")
+                {
+                    <h3 class="sub-title" style="text-align:center;">
+                        @Html.Raw(item.Title)
+                    </h3>
+                }
+                else
+                {
+                    <h3 class="sub-title" style="text-align:center;">
+                        @Html.Raw(item.Value)
+                    </h3>
+                }
+
+                <div class="link"><a href="/product">@Html.Raw(Resources.BUYNOW)</a></div>
+            </div>
+        </div>
+    }
+}

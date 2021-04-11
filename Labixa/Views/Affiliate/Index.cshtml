@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Outsourcing.Data.Models.User>
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (Model != null)
+{
+    <table class="table table-striped">
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>ParentId</th>
+            <th>ParentName</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>@item.UserName</td>
+        <td>@item.Email</td>
+        <td>@item.ParentId</td>
+    </tr>
+        }
+    </table>
+}

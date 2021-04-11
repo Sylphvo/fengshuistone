@@ -1,0 +1,179 @@
+﻿@model Outsourcing.Data.Models.Product
+@{
+    HttpCookie cookie = Request.Cookies["_culture"];
+    ViewBag.Title = ViewBag.Title;
+    ViewBag.Description = ViewBag.Description;
+    ViewBag.Image = ViewBag.Image;
+    ViewBag.Url = ViewBag.Url;
+}
+
+
+<style>
+    .new {
+        color: red;
+    }
+
+    .product-zoom {
+        margin: auto;
+    }
+</style>
+<div class="page-title-section section" data-bg-image="http://tueduchealthy.vn/Content/TueDuc/assets/images/bg/page-title-1.jpg" alt="tueduchealthy.vn">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="page-title">
+                    @if (cookie.Value == "vi" || cookie.Value == "")
+                    {
+                        <h1 class="title">Chi Tiết Sản Phẩm</h1>
+                    }
+                    else
+                    {
+                        <h1 class="title">Product Detail</h1>
+                    }
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Title/Header End -->
+<!-- Single Products Section Start -->
+<div class="section section-padding border-bottom">
+    <div class="container">
+        <div class="row learts-mb-n40">
+
+            <!-- Product Images Start -->
+            <div class="col-lg-6 col-12 learts-mb-40">
+                <div class="product-images">
+                    <button class="product-gallery-popup hintT-left" style="max-width:400px;max-height:450px" data-hint="Click to enlarge" data-images='[
+                            @foreach (var item in Model.ProductPictureMappings)
+                            {
+                                 @:{"src": "@item.Picture.Url", "w": 450, "h": 550},
+                            }
+                        ]'></button>
+
+                    <div class="product-gallery-slider">
+                        @foreach (var item in Model.ProductPictureMappings)
+                        {
+                            <div class="product-zoom" data-image="@item.Picture.Url" style="max-width:400px;max-height:450px" alt="tueduchealthy.vn">
+                                <img src="@item.Picture.Url" alt="@item.Title" style="max-width:400px;max-height:450px">
+                            </div>
+                        }
+
+                    </div>
+                    <div class="product-thumb-slider">
+                        @foreach (var item in Model.ProductPictureMappings)
+                        {
+                            <div class="item">
+                                <img src="@item.Picture.Url" alt="@item.Title" style="max-width:400px;max-height:450px">
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <!-- Product Images End -->
+            <!-- Product Summery Start -->
+            <div class="col-lg-6 col-12 learts-mb-40">
+                @if (cookie.Value == "vi" || cookie.Value == "")
+                {
+                    <div class="product-summery">
+
+
+                        <h3 class="product-title">@Html.Raw(Model.Name) </h3>
+                        @if (Model.IsHomePage == true)
+                        {
+                            <div class="product-price">
+                                <del><span class="old">@Model.OldPrice.ToString("#,##0") vnđ</span></del>   -
+                                <span class="new">@Model.Price.ToString("#,##0") vnđ</span>
+
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="product-price">
+                                <span class="price">
+                                    @Model.Price.ToString("#,##0") vnđ
+                                </span>
+                            </div>
+                        }
+
+                        <div class="product-description">
+                            <p>@Html.Raw(Model.Content)</p>
+
+                            <div class="product-buttons">
+
+                                <a href="#" onclick="return addToCart('@Model.Id')" class="btn btn-dark btn-outline-hover-dark"><i class="fal fa-shopping-cart"></i>Thêm Vào Giỏ Hàng</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                }
+                else
+                {
+                    <div class="product-summery">
+
+
+                        <h3 class="product-title">@Html.Raw(Model.NameEng) </h3>
+                        @if (Model.IsHomePage == true)
+                        {
+                            <div class="product-price">
+                                <span class="old"> @{var oldPrice = Math.Round(((Model.OldPrice) / 23000), 3);} @oldPrice $</span>-
+                                <span class="new"> @{var prices = Math.Round(((Model.Price) / 23000), 3);} @prices $</span>
+
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="product-price">
+                                <span class="price">
+                                    @{var prices = Math.Round(((Model.Price) / 23000), 3);} @prices $
+                                </span>
+                            </div>
+                        }
+
+                        <div class="product-description">
+                            <p>@Html.Raw(Model.ContentEng)</p>
+
+                            <div class="product-buttons">
+
+                                @*<a onclick="return addToCart('@Model.Id')" class="btn btn-dark btn-outline-hover-dark"><i class="fal fa-shopping-cart"></i>Thêm vào giỏ hàng</a>*@
+                                <a href="#" onclick="return addToCart('@Model.Id')" class="product-button hintT-top" data-hint="Add to Cart"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                }
+                <!-- Product Summery End -->
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section section-padding">
+        <div class="container">
+
+            <!-- Section Title Start -->
+            <div class="section-title2 text-center">
+                <h2 class="title">@Html.Raw(Resources.PromotionProducts)</h2>
+            </div>
+            <!-- Section Title End -->
+            <!-- Products Start -->
+            <div class="product-carousel">
+
+                @Html.Action("ProductFeatured", "Products")
+
+            </div>
+            <!-- Products End -->
+
+        </div>
+    </div>
+    <!-- Recommended Products Section End -->
+</div>
+

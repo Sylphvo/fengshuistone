@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Outsourcing.Data.Models.Product>
+@{
+    HttpCookie cookie = Request.Cookies["_culture"];
+}
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        if (cookie.Value == "vi" || cookie.Value == "")
+        {
+
+            <div class="col">
+                <div class="product">
+                    <div class="product-thumb">
+                        <a href="/productDetail/@item.Slug" class="image">
+                            <span class="product-badges">
+                                <span class="hot">Sale</span>
+                            </span>
+                            <img src="@item.ProductPictureMappings.FirstOrDefault().Picture.Url" alt="@item.Name">
+                            <img class="image-hover " src="@item.ProductPictureMappings.LastOrDefault().Picture.Url" alt="@item.Name">
+                        </a>
+
+                    </div>
+                    <div class="product-info">
+                        <h6 class="title"><a href="/productDetail/@item.Slug">@item.Name</a></h6>
+                        <span class="price">
+                            <span class="old">@item.OldPrice.ToString("#,##0") vnđ</span>
+                            <span class="new">@item.Price.ToString("#,##0") vnđ</span>
+                        </span>
+                        <div class="product-buttons">
+                            <a href="#" onclick="return addToCart()" class="product-button hintT-top" data-hint="Thêm Vào Giỏ Hàng"><i class="fal fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <input id="prodId" value="@item.Id" hidden />
+                </div>
+            </div>
+        }
+        else
+        {
+
+            <div class="col">
+                <div class="product">
+                    <div class="product-thumb">
+                        <a href="/productDetail/@item.Slug" class="image">
+                            <span class="product-badges">
+                                <span class="hot">Sale</span>
+                            </span>
+                            <img src="@item.ProductPictureMappings.FirstOrDefault().Picture.Url" alt="@item.NameEng">
+                            <img class="image-hover " src="@item.ProductPictureMappings.LastOrDefault().Picture.Url" alt="@item.NameEng">
+                        </a>
+
+                    </div>
+                    <div class="product-info">
+                        <h6 class="title"><a href="/productDetail/@item.Slug">@item.NameEng</a></h6>
+                        <span class="price">
+                            <span class="old"> @{var oldPrice = Math.Round(((item.OldPrice) / 23000), 3);} @oldPrice $</span>
+                            <span class="new"> @{var prices = Math.Round(((item.Price) / 23000), 3);} @prices $</span>
+
+                        </span>
+                        <div class="product-buttons">
+
+                            <a href="#" onclick="return addToCart()" class="product-button hintT-top" data-hint="Add To Cart"><i class="fal fa-shopping-cart"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    }
+}
+@*<script>
+    function addToCart() {
+        var count = 0;
+        var prodId = $('#prodId').val();
+        console.log("prodId: " + prodId);
+        $.ajax({
+            type: "POST",
+            url: "/ProductHome/AddToCart",
+            data: { ProductId: prodId },
+            success: function (result) {
+                console.log(result);
+                count++;
+                console.log("count cart: " + count);
+                document.getElementById("countCart").innerHTML = count;
+            }
+        });
+    };
+</script>*@
+

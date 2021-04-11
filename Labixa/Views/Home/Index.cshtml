@@ -1,0 +1,232 @@
+﻿@model Labixa.Controllers.Root
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .title-cover {
+        color: red;
+    }
+
+    .notificationaaaa {
+        margin-top: -186px !important;
+        margin-bottom: 115px !important;
+    }
+</style>
+<div class="hero-area">
+    @*@Html.Partial("_notification-temporary")*@
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 d-flex align-self-center">
+                <div class="left-content">
+                    <div class="content" style="text-align:center">
+                        <h5 class=" title-cover">
+                            BIGPLAYER CLUB IS A LONG PROFETING
+                        </h5>
+                        <h5 class="text">
+                            PLAY CRYPTO GAME IN YOUR BROWSER
+                        </h5>
+                        @*<a data-toggle="modal" href="#notification_message" id="mainaa">
+                            <p class="label">
+                                Play, Invest, Exchange and Join the
+                                Contest with high rewards at !
+                            </p>
+                        </a>*@
+                            <p class="label">
+                                Play, Invest, Exchange and Join the
+                                Contest with high rewards at !
+                            </p>
+                        <div class="links">
+                            <a href="/ware-game" target="_blank" class="mybtn1 link1">Play Now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="hero-img2 d-block d-md-none">
+                    <img src="/Content/assets/images/heroarea.png" alt="">
+                </div>
+                <div class="hero-img d-none d-md-block">
+                    <img class="img-fluid full-image" src="/Content/assets/images/heroarea.png" alt="">
+                    <img class="shape phone" src="/Content/assets/images/h-shapes/phone.png" alt="">
+                    <img class="shape man" src="/Content/assets/images/h-shapes/man222.png" alt="">
+                    <img class="shape ripple" src="/Content/assets/images/h-shapes/ripple.png" alt="">
+                    <img class="shape ripple2" src="/Content/assets/images/h-shapes/ripple1.png" alt="">
+                    <img class="shape bitcoin1" src="/Content/assets/images/h-shapes/bitcoin1.png" alt="">
+                    <img class="shape bitcoin2" src="/Content/assets/images/h-shapes/bitcoin2.png" alt="">
+                    <img class="shape shape-icon" src="/Content/assets/images/h-shapes/shape.png" alt="">
+                    <img class="shape award-bg" src="/Content/assets/images/h-shapes/award/bg.png" alt="">
+                    <img class="shape award" src="/Content/assets/images/h-shapes/award/award.png" alt="">
+                    <img class="shape gift-bg" src="/Content/assets/images/h-shapes/giftbox/bg.png" alt="">
+                    <img class="shape gift" src="/Content/assets/images/h-shapes/giftbox/gift.png" alt="">
+                    <img class="shape shield-bg" src="/Content/assets/images/h-shapes/shield/bg.png" alt="">
+                    <img class="shape shield" src="/Content/assets/images/h-shapes/shield/shield.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero Area End -->
+<!-- Featured Game Area Start -->
+<section class="featured-game">
+    <!-- Features Area Start -->
+    <div class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="feature-box">
+                        <div class="feature-box-inner">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3">
+                                    <div class="single-feature">
+                                        <div class="part-icon">
+                                            <img src="/Content/caseno/img/games/assets-1.png" alt="" style="width:70%;">
+                                        </div>
+                                        <h4 class="feature-title">
+                                            Online Casino
+                                        </h4>
+                                        <a href="/home/GameDetail?ID=108&System=998" target="_blank" class="def-btn def-small">
+                                            Play Now <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="long-arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-long-arrow-right fa-w-14 fa-fw fa-2x"><path fill="currentColor" d="M311.03 131.515l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887l-83.928 83.444c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l116.485-116c4.686-4.686 4.686-12.284 0-16.971L328 131.515c-4.686-4.687-12.284-4.687-16.97 0z" class=""></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3">
+                                    <div class="single-feature">
+                                        <div class="part-icon">
+                                            <img src="/Content/caseno/img/games/assets-3.png" alt="" style="width:50%;">
+                                        </div>
+                                        <h4 class="feature-title">
+                                            Club Poker
+                                        </h4>
+                                        <a href="/home/GameDetail?ID=105&System=998" target="_blank" class="def-btn def-small">
+                                            Play Now <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="long-arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-long-arrow-right fa-w-14 fa-fw fa-2x"><path fill="currentColor" d="M311.03 131.515l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887l-83.928 83.444c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l116.485-116c4.686-4.686 4.686-12.284 0-16.971L328 131.515c-4.686-4.687-12.284-4.687-16.97 0z" class=""></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3">
+                                    <div class="single-feature">
+                                        <div class="part-icon">
+                                            <img src="/Content/caseno/img/games/assets-7.png" style="width:60%;" alt="">
+                                        </div>
+                                        <h4 class="feature-title">
+                                            Royal casino
+                                        </h4>
+                                        <a href="/home/GameDetail?ID=105&System=998" target="_blank" class="def-btn def-small">
+                                            Play Now <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="long-arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-long-arrow-right fa-w-14 fa-fw fa-2x"><path fill="currentColor" d="M311.03 131.515l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887l-83.928 83.444c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l116.485-116c4.686-4.686 4.686-12.284 0-16.971L328 131.515c-4.686-4.687-12.284-4.687-16.97 0z" class=""></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3">
+                                    <div class="single-feature">
+                                        <div class="part-icon">
+                                            <img src="/Content/caseno/img/games/assets-6.png" style="width:55%;" alt="">
+                                        </div>
+                                        <h4 class="feature-title">
+                                            Slots 375
+                                        </h4>
+                                        <a href="/home/GameDetail?ID=104&System=998" target="_blank" class="def-btn def-small">
+                                            Play Now <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="long-arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-long-arrow-right fa-w-14 fa-fw fa-2x"><path fill="currentColor" d="M311.03 131.515l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887l-83.928 83.444c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l116.485-116c4.686-4.686 4.686-12.284 0-16.971L328 131.515c-4.686-4.687-12.284-4.687-16.97 0z" class=""></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Area End -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="section-heading">
+                    <h5 class="subtitle">
+                        Try to check out our
+                    </h5>
+                    <h5 class="text">
+                        Thousands Of Free Online Games
+                    </h5>
+                    <p class="label">
+                        BigplayerClub has thousands of free online games for all generation. Play action, racing, sports, and other fun games for free at BigplayerClub
+                    </p>
+                    <a href="/ware-game" target="_blank" class="mybtn1">Play  Now!</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Featured Game Area	End -->
+<!-- Latest Activities Area Start -->
+<!-- Latest Activities Area End -->
+<!-- Get Start Area Start -->
+<section class="get-start">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 d-flex align-self-center">
+                <div class="left-area">
+                    <div class="section-heading">
+                        <h5 class="subtitle">
+                            every day lots of  wins
+                        </h5>
+                        <h5 class="text">
+                            Be One Of Them
+                        </h5>
+                        <p class="label">
+                            Get started in less than 5 min - no credit card
+                            required. Gain early access to BigplayerClub and  experience crypto like never before.
+                        </p>
+                        <a href="/ware-game" target="_blank" class="mybtn1">Play  Now!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="right-image">
+                    <img src="/Content/assets/images/get-start.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal" tabindex="-1" role="dialog" id="notification_message">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="text-align: center;width:100%">Notification</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer" style="text-align: center;font-size:20px; color:white !important">
+                    <p style="color:white !important">
+                        Customers are experiencing not good in Website<br>
+                        We’re aware of the issue and are working on it urgently.
+                        We’re really sorry to be holding you up today!<br> Please know our teams are working hard to get everything up and running, and we will update you in as soon as possible with the latest information.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Get Start Area End -->
+<!-- Recent Winners Area Start -->
+
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5fc38326920fc91564cbb66c/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+@*<script>
+    $(document).ready(function () {
+        $('#mainaa').trigger('click');
+    });
+</script>*@

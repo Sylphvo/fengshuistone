@@ -1,0 +1,18 @@
+﻿@{
+    HttpCookie cookie = Request.Cookies["_culture"];
+}
+@model  Outsourcing.Data.Models.WebsiteAttribute
+<p>
+
+    @if (cookie.Value == "vi" || cookie.Value =="")
+    {
+        @Html.Raw(Model.Noted_1)
+    }
+    else
+    {
+        @Html.Raw(Model.Noted_2)
+    }
+</p>
+
+
+

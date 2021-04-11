@@ -1,0 +1,108 @@
+﻿<style>
+    @@media only screen and (max-width: 479px) and (min-width: 320px){
+        .header .logo img {
+            width: 61% !important;
+        }
+        @@media only screen and (max-width: 479px) and (min-width: 320px) {
+            .header_custom {
+                height: 58px;
+            }
+        } 
+     }
+    @@media(min-width:760px){
+        .header{
+            padding:0px 0px !important;
+        }
+    }
+</style>
+<!-- header section begin -->
+<div class="header" style="position:fixed !important;width:100% !important;padding:0 !important">
+    <div class="row">
+        <div class="overflow-hidden col-xl-3 col-lg-3 d-xl-flex d-lg-flex d-block align-items-center header_custom">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-6 d-xl-block d-lg-block" style="height:75px;">
+                    <div class="logo">
+                        <a href="/home"><img src="/Content/caseno/img/logo.png" alt="LOGO"></a>
+                    </div>
+                </div>
+                <div class="d-xl-none d-lg-none col-6 d-flex align-items-center justify-content-end" style="height:75px;">
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <div class="col-4">
+                            <a href="/login" style="color:white;">Login</a>
+                        </div>
+                        <div class="col-5">
+                            <a href="/register-account" style="color:white;">Signup</a>
+                        </div>
+                    }
+                    else
+                    {
+                        @*<div class="col-4">
+                            <a href="#" style="color:white;">Hello</a>
+                        </div>*@
+                        <div class="col-6">
+                            <a href="#" style="color:white;font-size:12px;">@User.Identity.Name</a>
+                        </div>
+                    }
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-9 col-lg-9">
+            <div class="top-header">
+                <div class="row justify-content-end">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="top-right">
+                            <div class="buttons">
+                                @{
+                                    if (User.Identity.IsAuthenticated)
+                                    {
+                                        @:<a href="/logoff">Logout</a>
+                                        <a href="#">@User.Identity.Name</a>
+                                    }
+                                    else
+                                    {
+                                        @:<a href="/login">Login</a>
+                                        <a href="/register-account"><i class="fas fa-sign-in-alt"></i> signup</a>
+                                    }
+                                }
+                            </div>
+                            <!-- <form class="part-searchBar">
+                                <input type="text" placeholder="Search Games">
+                                <button>
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-header">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <nav class="col-xl-12 col-lg-12 navbar navbar-expand-lg navbar-light" id="navbar">
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto me_aligns">
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        Html.RenderPartial("_MenuAuth");
+                                    }
+                                    else
+                                    {
+                                        Html.RenderPartial("_MenuStart");
+                                    }
+                                    @*<li class="nav-item">
+                                        <a class="nav-link" href="/contact-us">Contact</a>
+                                    </li>*@
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header section end -->

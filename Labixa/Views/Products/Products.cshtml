@@ -1,0 +1,195 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<Outsourcing.Data.Models.Product>
+@{
+    HttpCookie cookie = Request.Cookies["_culture"];
+}
+<div class="page-title-section section" data-bg-image="http://tueduchealthy.vn/Content/TueDuc/assets/images/bg/page-title-1.jpg" alt="tueduchealthy.vn">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="page-title">
+                    @if (cookie.Value == "vi" || cookie.Value == "")
+                    {
+                        <h1 class="title">Sản Phẩm</h1>
+                    }
+                    else
+                    {
+                        <h1 class="title">Products</h1>
+                    }
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="section section-fluid learts-mt-70">
+    <div class="container">
+        <!-- Products Start -->
+        <div id="shop-products" class="products isotope-grid row row-cols-xl-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+
+            <div class="grid-sizer col-1"></div>
+
+            @foreach (var item in Model)
+            {
+                <input id="prodId" value="@item.Id" hidden />
+                if (cookie.Value == "vi" || cookie.Value == "")
+                {
+                    if (item.IsHomePage == true)
+                    {
+                        <div class="grid-item col sales new">
+                            <div class="product">
+                                <div class="product-thumb">
+                                    <a href="/productDetail/@item.Slug" class="image">
+                                        <span class="product-badges">
+                                            <span class="hot">Sale</span>
+                                        </span>
+                                        <img src="@item.ProductPictureMappings.FirstOrDefault().Picture.Url" alt="@item.Name">
+                                        <img class="image-hover " src="@item.ProductPictureMappings.LastOrDefault().Picture.Url" alt="@item.Name">
+                                    </a>
+                                </div>
+                                <div class="product-info">
+                                    <h6 class="title">  <a href="/productDetail/@item.Slug">@item.Name</a></h6>
+                                    <span class="price">
+                                        <span class="old">@item.OldPrice.ToString("#,##0") vnđ</span>
+                                        <span class="new">@item.Price.ToString("#,##0") vnđ</span>
+                                    </span>
+                                    <div class="product-buttons">
+                                        <a href="#" class="product-button hintT-top" data-hint="Thêm Vào Giỏ Hàng"><i class="fal fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="grid-item col new">
+                            <div class="product">
+                                <div class="product-thumb">
+                                    <a href="/productDetail/@item.Slug" class="image">
+                                        <img src="@item.ProductPictureMappings.FirstOrDefault().Picture.Url" alt="@item.Name">
+                                        <img class="image-hover " src="@item.ProductPictureMappings.LastOrDefault().Picture.Url" alt="@item.Name">
+                                    </a>
+                                </div>
+                                <div class="product-info">
+                                    <h6 class="title"><a href="/productDetail/@item.Slug">@item.Name</a></h6>
+                                    <span class="price">
+                                        @item.Price.ToString("#,##0") vnđ
+                                    </span>
+                                    <div class="product-buttons">
+                                        <a href="#" onclick="return addToCart('@item.Id')" class="product-button hintT-top" data-hint="Thêm Vào Giỏ Hàng"><i class="fal fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    if (item.IsHomePage == true)
+                    {
+                        <div class="grid-item col sales new">
+                            <div class="product">
+                                <div class="product-thumb">
+                                    <a href="/productDetail/@item.Slug" class="image">
+                                        <span class="product-badges">
+                                            <span class="hot">Sale</span>
+                                        </span>
+                                        <img src="@item.ProductPictureMappings.FirstOrDefault().Picture.Url" alt="@item.NameEng">
+                                        <img class="image-hover " src="@item.ProductPictureMappings.LastOrDefault().Picture.Url" alt="@item.NameEng">
+                                    </a>
+                                </div>
+                                <div class="product-info">
+                                    <h6 class="title">  <a href="/productDetail/@item.Slug">@item.NameEng</a></h6>
+                                    <span class="price">
+                                        <span class="old"> @{var oldPrice = Math.Round(((item.OldPrice) / 23000), 3);} @oldPrice $</span>
+                                        <span class="new"> @{var prices = Math.Round(((item.Price) / 23000), 3);} @prices $</span>
+                                    </span>
+                                    <div class="product-buttons">
+                                        <a href="#" onclick="return addToCart('@item.Id')" class="product-button hintT-top" data-hint="Add To Cart"><i class="fal fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="grid-item col new">
+                            <div class="product">
+                                <div class="product-thumb">
+                                    <a href="/productDetail/@item.Slug" class="image">
+                                        <img src="@item.ProductPictureMappings.FirstOrDefault().Picture.Url" alt="@item.NameEng">
+                                        <img class="image-hover " src="@item.ProductPictureMappings.LastOrDefault().Picture.Url" alt="@item.NameEng">
+                                    </a>
+                                </div>
+                                <div class="product-info">
+                                    <h6 class="title"><a href="/productDetail/@item.Slug">@item.NameEng</a></h6>
+                                    <span class="price">
+                                        @{var prices = Math.Round(((item.Price) / 23000), 3);} @prices $
+                                    </span>
+                                    <div class="product-buttons">
+                                        <a href="#" onclick="return addToCart('@item.Id')" class="product-button hintT-top" data-hint="Add To Cart"><i class="fal fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+
+            }
+
+
+
+        </div>
+
+    </div>
+    <br />
+
+
+    <div class="row learts-mt-50">
+        <div class="col text-center">
+            @if (cookie.Value == "vi" || cookie.Value == "")
+            {
+                <div style="font-family:Marcellus,Arial,Helvetica,sans-serif">
+                    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                </div>
+                <br />
+            }
+            else
+            {
+                <div style="font-family:Marcellus,Arial,Helvetica,sans-serif">
+                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                </div>
+                <br />
+            }
+            <center>@Html.PagedListPager(Model, page => Url.Action("Products", "Products", new { page }))</center>
+
+        </div>
+    </div>
+</div>
+<script>
+    function addToCart(prodId) {
+        var count = document.getElementById('countCart').innerHTML;
+        console.log("get value count: " + count);
+        var countValue = parseInt(count);
+        console.log("count cart: " + countValue);
+        console.log("prodId: " + prodId);
+        var quantity = 1;
+        $.ajax({
+            type: "POST",
+            url: "/Products/AddToCart",
+            data: { ProductId: prodId, Quantity: quantity },
+            success: function (result) {
+                console.log(result);
+                count++;
+                console.log("count cart: " + count);
+                document.getElementById("countCart").innerHTML = count;
+            }
+        });
+    };
+</script>

@@ -1,0 +1,117 @@
+﻿@using Outsourcing.Core.Common
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<Outsourcing.Data.Models.Blog>
+@{
+    HttpCookie cookie = Request.Cookies["_culture"];
+}
+
+
+<div class="page-title-section section" data-bg-image="http://tueduchealthy.vn/Content/TueDuc/assets/images/bg/page-title-1.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="page-title">
+                    @if (cookie.Value == "en" || cookie.Value == "")
+                    {
+                        <h1 class="title">Recruitment</h1>
+                    }
+                    else
+                    {
+                        <h1 class="title">Tuyển Dụng</h1>
+
+                    }
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Title/Header End -->
+<!-- Portfolio Section Start -->
+<div class="section section-padding">
+    <div class="container">
+        <div class="row learts-mb-n40">
+            @foreach (var item in Model)
+            {
+                if (cookie.Value == "en" || cookie.Value == "")
+                {
+                    <div class="col-lg-4 col-md-6 col-12 learts-mb-40">
+                        <div class="blog">
+                            <div class="image">
+                                <a href="blog-details-right-sidebar.html"><img style="height:227px;" src="@item.BlogImage_Default" alt="@item.TitleEng"></a>
+                            </div>
+                            <div class="content">
+                                <ul class="meta">
+                                    <li><i class="far fa-calendar"></i><a href="#">@item.DateCreated</a></li>
+                                </ul>
+                                <h5 class="title"><a href="/newDetail/@item.Slug">@Html.Raw(slitString.TruncateAtWord(item.TitleEng, 80))</a></h5>
+                                <div class="desc">
+                                    @Html.Raw(slitString.TruncateAtWord(item.DescriptionEng, 200))
+                                </div>
+                                <a href="/newDetail/@item.Slug" class="link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+
+
+                    <div class="col-lg-4 col-md-6 col-12 learts-mb-40">
+                        <div class="blog">
+                            <div class="image">
+                                <a href="blog-details-right-sidebar.html"><img style="height:227px;" src="@item.BlogImage_Default" alt="@item.Title"></a>
+                            </div>
+                            <div class="content">
+                                <ul class="meta">
+                                    <li><i class="far fa-calendar"></i><a href="#">@item.DateCreated</a></li>
+                                </ul>
+                                <h5 class="title"><a href="/newDetail/@item.Slug">@Html.Raw(slitString.TruncateAtWord(item.Title, 80))</a></h5>
+                                <div class="desc">
+                                    <p>@Html.Raw(slitString.TruncateAtWord(item.Description, 200))</p>
+                                </div>
+                                <a href="/newDetail/@item.Slug" class="link">Xem Thêm</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                }
+            }
+
+
+
+
+
+        </div>
+
+        <div class="row learts-mt-50">
+            <div class="col text-center">
+                @if (cookie.Value == "vi" || cookie.Value == "")
+                {
+                <div style="font-family:Marcellus,Arial,Helvetica,sans-serif">
+                    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                </div>
+                <br />
+                }
+                else
+                {
+                <div style="font-family:Marcellus,Arial,Helvetica,sans-serif">
+                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                </div>
+                <br />
+                }
+
+
+                <center>@Html.PagedListPager(Model, page => Url.Action("News", "New", new { page }))</center>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+

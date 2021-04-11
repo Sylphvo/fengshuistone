@@ -1,0 +1,404 @@
+﻿@using Labixa.HashMD
+@model Labixa.Controllers.History_Modal
+@{
+    ViewBag.Title = "MyAffilites";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .textColor_Custom {
+        color: #f64942;
+    }
+
+    hr {
+        border-top: 1px solid rgb(212 74 53) !important;
+    }
+</style>
+<!-- breadcrumb begin -->
+
+<div class="breadcrumb-miscoo" style="background-color: #070b28;text-align:center">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-6">
+                <div class="breadcrumb-content">
+                    <h2 class="title">History Trasaction</h2>
+                    <p>Big Player Club has thousands of free online games for all generation. Play action, racing, sports, and other fun games for free at Big Player Club</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb end -->
+
+<div class="user-dashboard" style="background-color: #070b28 ">
+    <!--Start Widthdraw ETH Trasaction-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <h4 class="games-title textColor_Custom"> Widthdraw ETH Transaction</h4>
+                <hr class="textColor_Custom" />
+            </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="transactions-table">
+                    <div class="table-responsive">
+                        <table id="example1" class="display misco-data-table table table-bordered" style="width:100%;color:#ffffff;">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Time</th>
+                                    <th>Address To</th>
+                                    <th>Amount (ETH)</th>
+                                    <th>Fee</th>
+                                    <th>View</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="withdraw-table">
+                                @foreach (var item in Model.withdrawethcurrency)
+                                {
+                                    var hash = HashMD5.MD5HashView(item.id.ToString());
+                                    <tr>
+                                        <td id="@item.id">@hash</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.Address</td>
+                                        <td>@item.Amount</td>
+                                        <td>@item.Fee</td>
+                                        <td>@item.TxnHash</td>
+                                        <td>@item.Status</td>
+                                    </tr>
+
+                                }
+                                @foreach (var item in Model.withdrawethnew)
+                                {
+                                    var hash = HashMD5.MD5HashView(item.id);
+                                    <tr>
+                                        <td id="@item.id">@hash</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.toAddress</td>
+                                        <td>@item.amount</td>
+                                        <td>@item.Fee</td>
+                                        <td>@item.txHash</td>
+                                        <td>@item.status</td>
+                                    </tr>
+                                }
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Widthdraw ETH Trasaction-->
+    <!--Start Widthdraw VIP Trasaction-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <h4 class="games-title textColor_Custom"> Widthdraw BIT Transaction</h4>
+                <hr class="textColor_Custom" />
+            </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="transactions-table">
+                    <div class="table-responsive">
+                        <table id="example4" class="display misco-data-table table table-bordered" style="width:100%;color:#ffffff;">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Time</th>
+                                    <th>Address</th>
+                                    <th>Amount (BIT)</th>
+                                    <th>Fee (BIT)</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="withdrawVIP-table">
+                                @foreach (var item in Model.withdrawbitcurrency)
+                                {
+                                    var hash = HashMD5.MD5HashView(item.id.ToString());
+                                    <tr>
+                                        <td id="@item.id">@hash</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.Address</td>
+                                        <td>@item.Amount</td>
+                                        <td>@item.Fee</td>
+                                        <td>@item.Status</td>
+                                    </tr>
+
+                                }
+                                @foreach (var item in Model.withdrawbitnew)
+                                {
+                                    var hash = HashMD5.MD5HashView(item.id);
+                                    <tr>
+                                        <td id="@item.id">@hash</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.toAddress</td>
+                                        <td>@item.amount</td>
+                                        <td>@item.Fee</td>
+                                        <td>@item.status</td>
+                                    </tr>
+
+                                }
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Widthdraw VIP Trasaction-->
+    <!--Start Deposit ETH Trasaction-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <h4 class="games-title textColor_Custom"> Deposit ETH Transaction</h4>
+                <hr class="textColor_Custom" />
+            </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="transactions-table">
+                    <div class="table-responsive">
+                        <table id="example" class="display misco-data-table table table-bordered" style="width:100%;color:#ffffff;">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Time</th>
+                                    <th>Amount (ETH)</th>
+                                    <th>View</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="deposit-table">
+                                @foreach (var item in Model.depositethcurrency)
+                                {
+                                    var hash = HashMD5.MD5HashView(item.id.ToString());
+                                    <tr>
+                                        <td id="@item.id">@hash</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.Amount</td>
+                                        <td>@item.TxHash</td>
+                                        <td>@item.Status</td>
+                                    </tr>
+
+                                }
+                                @foreach (var item in Model.depositethnew)
+                                {
+                                    var hash = HashMD5.MD5HashView(item.id);
+                                    <tr>
+                                        <td id="@item.id">@hash</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.amount</td>
+                                        <td>@item.txHash</td>
+                                        <td>@item.status</td>
+                                    </tr>
+
+                                }
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Deposit ETH Trasaction-->
+    <!--Start Deposit VIP Trasaction-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <h4 class="games-title textColor_Custom"> Deposit BIT Transaction</h4>
+                <hr class="textColor_Custom" />
+            </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="transactions-table">
+                    <div class="table-responsive">
+                        <table id="example3" class="display misco-data-table table table-bordered" style="width:100%;color:#ffffff;">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Time</th>
+                                    <th>Amount (BIT)</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="depositVIP-table">
+                                @foreach (var item in Model.depositbitcurrency)
+                                {
+                                    var hash = HashMD5.MD5HashView(item.id.ToString());
+                                    <tr>
+                                        <td id="@item.id">@hash</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.Amount</td>
+                                        <td>@item.Status</td>
+                                    </tr>
+
+                                }
+                                @foreach (var item in Model.depositbitnew)
+                                {
+                                    var hash = HashMD5.MD5HashView(item.id);
+                                    <tr>
+                                        <td id="@item.id">@hash</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.amount</td>
+                                        <td>@item.status</td>
+                                    </tr>
+
+                                }
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Deposit VIP Trasaction-->
+    <!--Start Exchange ETH Trasaction-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <h4 class="games-title textColor_Custom"> Exchange ETH Transaction</h4>
+                <hr class="textColor_Custom" />
+            </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="transactions-table">
+                    <div class="table-responsive">
+                        <table id="example2" class="display misco-data-table table table-bordered" style="width:100%;color:#ffffff;">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Time</th>
+                                    <th>From Amount(ETH)</th>
+                                    <th>To Amount(BIT)</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="exchangeETH-table">
+                                @foreach (var item in Model.exchangeethcurrency)
+                                {
+                                    var hash = HashMD5.MD5HashView(item.id.ToString());
+                                    <tr>
+                                        <td id="@item.id">@hash</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.From</td>
+                                        <td>@item.To</td>
+                                        <td>@item.Status</td>
+                                    </tr>
+
+                                }
+                                @foreach (var item in Model.exchangeethnew)
+                                {
+                                    var hash = HashMD5.MD5HashView(item.id);
+                                    <tr>
+                                        <td id="@item.id">@hash</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.from</td>
+                                        <td>@item.to</td>
+                                        <td>@item.status</td>
+                                    </tr>
+
+                                }
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Exchange ETH Trasaction-->
+    <!--Start  Exchange VIP Trasaction-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <h4 class="games-title textColor_Custom"> Exchange BIT Transaction</h4>
+                <hr class="textColor_Custom" />
+            </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="transactions-table">
+                    <div class="table-responsive">
+                        <table id="example5" class="display misco-data-table table table-bordered" style="width:100%;color:#ffffff;">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Time</th>
+                                    <th>From Amount (BIT)</th>
+                                    <th>To Amount (ETH)</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ExchangeVIP-table">
+                                @foreach (var item in Model.exchangebitcurrency)
+                                {
+                                    var hash = HashMD5.MD5HashView(item.id.ToString());
+                                    <tr>
+                                        <td id="@item.id">@hash</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.From</td>
+                                        <td>@item.To</td>
+                                        <td>@item.Status</td>
+                                    </tr>
+
+                                }
+                                @foreach (var item in Model.exchangebitnew)
+                                {
+                                    var hash = HashMD5.MD5HashView(item.id);
+                                    <tr>
+                                        <td id="@item.id">@hash</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.from</td>
+                                        <td>@item.to</td>
+                                        <td>@item.status</td>
+                                    </tr>
+
+                                }
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End  Exchange VIP Trasaction-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <h4 class="games-title textColor_Custom"> Commission</h4>
+                <hr class="textColor_Custom" />
+            </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="transactions-table">
+                    <div class="table-responsive">
+                        <table id="example6" class="display misco-data-table table table-bordered" style="width:100%;color:#ffffff;">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Time</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="Commission-table">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+@section scripts{
+    @*<script type="text/javascript" src="~/Content/caseno/js/adminjs/admin.history.js"></script>*@
+    <!-- chart js -->
+    @*<script src="/Content/caseno/js/Chart.min.js"></script>
+        <script src="/Content/caseno/js/chart-activate.js"></script>*@
+    <!-- utils for chart js -->
+    <script src="/Content/caseno/js/utils.js"></script>
+    <!-- data table -->
+    <script src="/Content/caseno/js/jquery.dataTables.js"></script>
+    <script src="/Content/caseno/js/data-able-active.js"></script>
+}
