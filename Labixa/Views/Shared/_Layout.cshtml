@@ -1,532 +1,172 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
+
+<!-- Mirrored from www.designesia.com/themes/archi-main/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Mar 2021 18:30:58 GMT -->
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="forntEnd-Developer" content="Mamunur Rashid">
+    <meta charset="utf-8">
+    <title>Archi - Creative Interior Design Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Bigplayer Club</title>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="~/Content/caseno/img/bp.png" type="image/x-icon">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="~/Content/assets/css/bootstrap.min.css">
-    <!-- Plugin css -->
-    <link rel="stylesheet" href="/Content/assets/css/plugin.css">
+    <meta name="description" content="Archi is best selling interior design website template with responsive stunning design">
+    <meta name="keywords" content="architecture,building,business,bootstrap,creative,exterior design,furniture design,gallery,garden design,house,interior design,landscape design,multipurpose,onepage,portfolio,studio">
+    <meta name="author" content="">
 
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="/Content/assets/css/style.css">
-    <!-- responsive -->
-    <link rel="stylesheet" href="/Content/assets/css/responsive.css">
-    <!-- jquery -->
-    @*<link rel="stylesheet" href="/Content/caseno/css/bootstrap.min.css">*@
-    <!-- fontawesome icon  -->
-    <link rel="stylesheet" href="/Content/caseno/css/fontawesome.min.css">
-    <!-- flaticon css -->
-    <link rel="stylesheet" href="/Content/caseno/fonts/flaticon.css">
-    <!-- animate.css -->
-    <link rel="stylesheet" href="/Content/caseno/css/animate.css">
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="/Content/caseno/css/owl.carousel.css">
-    <!-- <link rel="stylesheet" href="/Content/caseno/css/owl.carousel.min.css"> -->
-    <link rel="stylesheet" href="/Content/caseno/css/owl.carousel.css">
-    <!-- magnific popup -->
-    <link rel="stylesheet" href="/Content/caseno/css/modal-video.min.css">
-    <!-- data table -->
-    <link rel="stylesheet" href="/Content/caseno/css/jquery.dataTables.css">
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="/Content/caseno/css/style.css">
-    <!-- responsive -->
-    <link rel="stylesheet" href="/Content/caseno/css/responsive.css">
-    <script src="/Content/assets/js/jquery.js"></script>
-    <script src="~/Scripts/qrcode.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <!--Tri code here-->
-    <style>
-        .navbar::after {
-            border-bottom: 0 !important;
-            border-right: 0 !important;
-        }
 
-        .navbar {
-            margin-bottom: 0 !important;
-        }
+    <!--[if lt IE 9]>
+    <script src="/Content/stone/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CSS Files
+    ================================================== -->
+    <link rel="stylesheet" href="/Content/stone/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/Content/stone/css/jpreloader.css" type="text/css">
+    <link rel="stylesheet" href="/Content/stone/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="/Content/stone/css/plugin.css" type="text/css">
+    <link rel="stylesheet" href="/Content/stone/css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="/Content/stone/css/owl.theme.css" type="text/css">
+    <link rel="stylesheet" href="/Content/stone/css/owl.transitions.css" type="text/css">
+    <link rel="stylesheet" href="/Content/stone/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/Content/stone/css/style.css" type="text/css">
 
-        .navbar-brand {
-            height: 100% !important;
-        }
+    <!-- custom background -->
+    <link rel="stylesheet" href="/Content/stone/css/bg.css" type="text/css">
 
-        .a {
-            color: white
-        }
+    <!-- color scheme -->
+    <link rel="stylesheet" href="/Content/stone/css/colors/yellow.css" type="text/css" id="colors">
+    <link rel="stylesheet" href="/Content/stone/css/color.css" type="text/css">
 
-        .header {
-            padding: 0px !important;
-        }
+    <!-- load fonts -->
+    <link rel="stylesheet" href="/Content/stone/fonts/font-awesome/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="/Content/stone/fonts/elegant_font/HTML_CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="/Content/stone/fonts/et-line-font/style.css" type="text/css">
 
-        .logofooter {
-            width: 39%;
-        }
-
-        @@media(max-width:1101px) {
-            #dropmenu {
-                left: -70%;
-            }
-        }
-
-        @@media(max-width:762px) {
-            #logo {
-                width: 35% !important;
-            }
-        }
-
-        @@media only screen and (max-width: 479px) and (min-width: 320px) {
-            .header .logo img {
-                width: 61% !important;
-            }
-
-            @@media only screen and (max-width: 479px) and (min-width: 320px) {
-                .header_custom {
-                    height: 58px;
-                }
-            }
-        }
-
-        @@media(max-width:768px) {
-            .navbar-toggler {
-                background: -webkit-linear-gradient(130deg, #FF416B, #ff4b2b);
-            }
-        }
-
-        @@media(min-width:998px) {
-            #btnlog {
-                display: none;
-            }
-
-            .navbar-nav {
-                float: right !important;
-            }
-        }
-
-        .modal-content {
-            background-color: #242424 !important;
-        }
-
-        .modal-title {
-            color: white !important;
-        }
-    </style>
-    <!--Tri code here-->
-
+    <!-- revolution slider -->
+    <link rel="stylesheet" href="/Content/stone/rs-plugin/css/settings.css" type="text/css">
+    <link rel="stylesheet" href="/Content/stone/css/rev-settings.css" type="text/css">
 </head>
 
-<body>
-    <!-- preloader area start -->
-    <div class="preloader" id="preloader">
-        <div class="loader loader-1">
-            <div class="loader-outter"></div>
-            <div class="loader-inner"></div>
-        </div>
-    </div>
-    <!-- preloader area end -->
-    <!-- Header Area Start  -->
-    <header class="header" style="position:fixed !important;width:100% !important;">
-        <!-- Top Header Area Start -->
+<body id="homepage">
 
-        <section class="top-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="content">
-                            <div class="left-content" style="margin-bottom:0px !important">
-                            </div>
-                            <div class="right-content float-right" style="font-weight:lighter">
-                                <ul class="right-list" style="font-size:15px;">
-                                    @if (!User.Identity.IsAuthenticated)
-                                    {
-                                        <li>
-                                            <a href="/login" class="sign-in-alt">
-                                                <i class="fas fa-sign-in-alt"></i> Sign In
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/register-account" class="sign-up-btn">
-                                                <i class="fas fa-user"></i> Sign Up
-                                            </a>
-                                        </li>
-                                    }
-                                    else
-                                    {
-                                        <li>
-                                            <div class="notofication tm-dropdown">
-                                                <a href="#" class="sign-out" data-target="#logout">
-                                                    <i class="fas fa-user"></i> @User.Identity.Name
-                                                </a>
-                                            </div>
-                                        </li>
+    <div id="wrapper">
 
-                                        <li>
-                                            <a href="/logoff" class="sign-out" data-target="#logout">
-                                                <i class="fas fa-sign-out-alt"></i> Logout
-                                            </a>
-                                        </li>
-                                    }
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Top Header Area End -->
-        <!--Main-Menu Area Start-->
-
-        <div class="mainmenu-area">
-            <div class="container">
-
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-
-                        <a class="navbar-brand" id="logo" href="/Home" style="width:22%">
-                            <img src="~/Content/caseno/img/logobigplayerclub.png" s />
-                            @*<img class=" ah-float-left" style="width:30%;margin-left:30px;" src="~/Content/caseno/img/logobigplayerclub.png" alt="" href="/Home">*@
-                        </a>
-
-                        @if (!User.Identity.IsAuthenticated)
-                        {
-                        }
-                        else
-                        {
-                            <a href="/account-dashboard" class="nav-link" id="btnlog" style="margin-left:auto">
-                                @User.Identity.Name
-                            </a>
-                        }
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse fixed-height" id="main_menu">
-
-                            @if (!User.Identity.IsAuthenticated)
-                            {
-
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item dropdown">
-                                        <a href="/login" class="nav-link" id="btnlog">
-                                            Sign In
-                                            <div class="mr-hover-effect"></div>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a href="/register-account" class="nav-link" id="btnlog">
-                                            Sign Up
-                                            <div class="mr-hover-effect"></div>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link" href="/Home"
-                                           aria-expanded="false">
-                                            Home
-                                            <div class="mr-hover-effect"></div>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            }
-                            else
-                            {
-                        <ul class="navbar-nav ml-auto" style="font-size:10px;">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="/Home"
-                                   aria-expanded="false">
-                                    Home
-                                    <div class="mr-hover-effect"></div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/account-dashboard">
-                                    Dashboard
-                                    <div class="mr-hover-effect"></div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/ware-game">
-                                    livegame
-                                    <div class="mr-hover-effect"></div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/history-transaction">
-                                    History
-                                    <div class="mr-hover-effect"></div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/change-password">
-                                    Security
-                                    <div class="mr-hover-effect"></div>
-                                </a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                   aria-expanded="false">
-                                    Affiliate
-                                    <div class="mr-hover-effect"></div>
-                                </a>
-                                <ul class="dropdown-menu" id="dropmenu">
-                                    <li><a class="dropdown-item" href="/affilites"> <i class="fa fa-angle-double-right"></i>Overview Affiliate</a></li>
-                                    <li><a class="dropdown-item" href="/my-affilites"> <i class="fa fa-angle-double-right"></i>My Affiliate</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Contact">
-                                    Support
-                                    <div class="mr-hover-effect"></div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/logoff" data-target="#logout" id="btnlog">
-                                    Log out
-                                    <div class="mr-hover-effect"></div>
-                                </a>
-                            </li>
-                        </ul>
-                            }
-                            @*</ul>*@
-                            @*<a href="#" class="mybtn1" data-toggle="modal" data-target="#signin"> Join</a>*@
-                        </div>
-                    </nav>
-                </div>
-
-            </div>
-
-        </div>
-        <!--Main-Menu Area Start-->
-    </header>
-    <!-- Header Area End  -->
-    <!-- Hero Area Start -->
-    @RenderBody()
-    <!-- Recent Winners Area End -->
-    <!-- Footer Area Start -->
-<footer class="footer" id="footer">
-    @*<div class="subscribe-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="subscribe-box">
-                            <form action="#">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="heading-area">
-                                            <h5 class="sub-title">
-                                                subscribe to Dooplo
-                                            </h5>
-                                            <h4 class="title">
-                                                To Get Exclusive Benefits
-                                            </h4>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-4 d-flex align-self-center">
-                                        <div class="icon">
-                                            <img src="assets/images/mail-box.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-8 d-flex align-self-center">
-                                        <div class="form-area">
-                                            <input type="text" placeholder="Your Email Address">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 d-flex align-self-center">
-                                        <div class="button-area">
-                                            <button class="mybtn1" type="submit">
-                                                Subscribe
-                                                <span><i class="fas fa-paper-plane"></i></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>*@
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="footer-widget info-link-widget">
-                    <center>
-                        <a href="/Home">
-                            <img src="~/Content/caseno/img/logobigplayerclub.png" alt="" class="logofooter" />
-                        </a>
-                        <ul class="link-list">
-                            <li>
-                                <span>
-                                    Bigplayer Club is the essence of gambling. From spinning to winning we ensure all gaming experiences at Bigplayer Club feel special.
-                                    The playing sensation will appear like nothing else. There is simply no reason not to become a part of this breathtaking story.
-                                </span>
-                            </li>
-                        </ul>
-                    </center>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="footer-widget info-link-widget">
-                    <h2 class="title">
-                        Play Games
-                    </h2>
-                    <ul class="link-list">
-                        <li>
-                            <a href="/ware-game">
-                                <i class="fas fa-angle-double-right"></i>	 Action Games
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/ware-game">
-                                <i class="fas fa-angle-double-right"></i>	 Intellectual
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/ware-game">
-                                <i class="fas fa-angle-double-right"></i>	Latest Blog
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/ware-game">
-                                <i class="fas fa-angle-double-right"></i>	 Online Casino
-
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/ware-game">
-                                <i class="fas fa-angle-double-right"></i>	 Lottery Draw
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <i class="fas fa-angle-double-right"></i>	Chess Master
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="footer-widget info-link-widget">
-                    <h4 class="title">
-                        Legal Info
-                    </h4>
-                    <ul class="link-list">
-                        <li>
-                            <span> Email: admin@bigplayerclub.com</span><br />
-                            <span> Email Support: support@bigplayerclub.com</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="copyright-area" style="margin-top:80px;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-8 col-lg-8">
-                    <center>
-                        <p>Copyright © <a >The Bigplayer Club Live Game</a> - 2020. All Rights Reserved</p>
-                    </center>
-                </div>
-            </div>
+        <!-- header begin -->
+        @Html.Partial("_Header")
+        <!-- header close -->
+        <!-- content begin -->
+        <div id="content" class="no-bottom no-top">
+            @RenderBody()
+            @Html.Partial("_Footer")
         </div>
     </div>
 
-   
-    
-</footer>
-    <!-- Footer Area End -->
-    <!-- Back to Top Start -->
-    @*    <div class="bottomtotop">
-            <i class="fas fa-chevron-right"></i>
-        </div>*@
-    <!-- Back to Top End -->
-    <!-- SignIn Area Start -->
-    <div class="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered " role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <div class="modal-body">
+    <!-- style switcher
+    ================================================== -->
 
-                    <div class="logo-area">
 
-                        <img class="logo" src="/Content/assets/images/logo.png" alt="">
+    <div id="switcher">
+        <span class="custom-close"></span>
+        <span class="custom-show"></span>
 
-                    </div>
-                    <div class="header-area">
-                        <h4 class="title">Great to have you back!</h4>
-                        <p class="sub-title">Enter your details below.</p>
-                    </div>
-                    <div class="form-area">
-                        <form action="#" method="POST">
-                            <div class="form-group">
-                                <label for="input-name">Name*</label>
-                                <input type="text" class="input-field" id="input-name" placeholder="Enter your Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="input-email">Email*</label>
-                                <input type="email" class="input-field" id="input-email" placeholder="Enter your Email">
-                            </div>
-                            <div class="form-group">
-                                <label for="input-password">Password*</label>
-                                <input type="password" class="input-field" id="input-password" placeholder="Enter your password">
-                            </div>
-                            <div class="form-group">
-                                <label for="input-con-password">confirm password**</label>
-                                <input type="password" class="input-field" id="input-con-password" placeholder="Enter your Confirm Password">
-                            </div>
-                            <div class="form-group">
-                                <select>
-                                    <option value="0">BTC</option>
-                                    <option value="1">USD</option>
-                                    <option value="2">EUR</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <div class="check-group">
-                                    <input type="checkbox" class="check-box-field" id="input-terms" checked>
-                                    <label for="input-terms">
-                                        I agree with <a href="#">terms and Conditions</a> and  <a href="#">privacy policy</a>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="mybtn1">Take Bonus</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <span class="sw-title">Header Style</span>
+        <select name="switcher" id="de-header-style">
+            <option value="opt-1" selected>Solid</option>
+            <option value="opt-2">Transparent</option>
+        </select>
+
+        <div class="clearfix"></div>
+
+        <span class="sw-title">Header Color</span>
+        <select name="switcher" id="de-header-color">
+            <option value="opt-1" selected>Dark</option>
+            <option value="opt-2">Light</option>
+        </select>
+
+        <div class="clearfix"></div>
+
+        <span class="sw-title">Header Layout</span>
+        <select name="switcher" id="de-header-layout">
+            <option value="opt-1" selected>Simple</option>
+            <option value="opt-2">Extended</option>
+        </select>
+
+        <div class="clearfix"></div>
+
+        <span class="sw-title">Menu Style</span>
+        <select name="switcher" id="de-menu">
+            <option value="opt-1" selected>Dotted Separator</option>
+            <option value="opt-2">Line Separator</option>
+            <option value="opt-3">Circle Separator</option>
+            <option value="opt-4">Square Separator</option>
+            <option value="opt-5">Plus Separator</option>
+            <option value="opt-6">Strip Separator</option>
+            <option value="opt-0">No Separator</option>
+        </select>
+
+        <div class="clearfix"></div>
+
+        <span class="sw-title">Color :</span>
+        <ul id="de-color">
+            <li class="bg1"></li>
+            <li class="bg2"></li>
+            <li class="bg3"></li>
+            <li class="bg4"></li>
+            <li class="bg5"></li>
+            <li class="bg6"></li>
+            <li class="bg7"></li>
+            <li class="bg8"></li>
+            <li class="bg9"></li>
+            <li class="bg10"></li>
+        </ul>
     </div>
-    @RenderSection("scripts", required: false)
-    @*@Html.Partial("_notification")*@
-    <!-- SignIn Area End -->
-    <!-- popper -->
-    <script src="/Content/assets/js/popper.min.js"></script>
-    <!-- bootstrap -->
-    <script src="/Content/assets/js/bootstrap.min.js"></script>
-    <!-- plugin js-->
-    <script src="/Content/assets/js/plugin.js"></script>
 
-    <!-- MpusemoverParallax JS-->
-    <script src="/Content/assets/js/TweenMax.js"></script>
-    <script src="/Content/assets/js/mousemoveparallax.js"></script>
-    <!-- main -->
-    <script src="/Content/assets/js/main.js"></script>
-    @*<script>
+    <div id="purchase-now">
+        <a href="../../../themeforest.net/item/archi-interior-design-website-template/10940889.html"><span>$</span>20</a>
+        <div class="pn-hover">Buy Now</div>
+    </div>
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="/Content/stone/js/jquery.min.js"></script>
+    <script src="/Content/stone/js/jpreLoader.js"></script>
+    <script src="/Content/stone/js/bootstrap.min.js"></script>
+    <script src="/Content/stone/js/jquery.isotope.min.js"></script>
+    <script src="/Content/stone/js/easing.js"></script>
+    <script src="/Content/stone/js/jquery.flexslider-min.js"></script>
+    <script src="/Content/stone/js/jquery.scrollto.js"></script>
+    <script src="/Content/stone/js/owl.carousel.js"></script>
+    <script src="/Content/stone/js/jquery.countTo.js"></script>
+    <script src="/Content/stone/js/classie.js"></script>
+    <script src="/Content/stone/js/video.resize.js"></script>
+    <script src="/Content/stone/js/validation.js"></script>
+    <script src="/Content/stone/js/wow.min.js"></script>
+    <script src="/Content/stone/js/jquery.magnific-popup.min.js"></script>
+    <script src="/Content/stone/js/jquery.stellar.min.js"></script>
+    <script src="/Content/stone/js/enquire.min.js"></script>
+    <script src="/Content/stone/js/cookit.js"></script>
+    <script src="/Content/stone/js/designesia.js"></script>
+
+    <!-- SLIDER REVOLUTION SCRIPTS  -->
+    <script src="/Content/stone/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="/Content/stone/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- COOKIES PLUGIN  -->
+    <script>
         $(document).ready(function () {
-            $('#notification1234').trigger('click');
+            $.cookit({
+                backgroundColor: '#1c1c1c',
+                messageColor: '#fff',
+                linkColor: '#fad04c',
+                buttonColor: '#fad04c',
+                messageText: "This website uses <b>cookies</b> to ensure you get the best experience on our website.",
+                linkText: "Learn more",
+                linkUrl: "index.html",
+                buttonText: "I accept",
+            });
         });
-    </script>*@
+    </script>
+
+
 </body>
 
 
-<!-- Mirrored from pixner.net/dooplo/dooplo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Jan 2021 14:52:26 GMT -->
+<!-- Mirrored from www.designesia.com/themes/archi-main/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Mar 2021 18:31:11 GMT -->
 </html>

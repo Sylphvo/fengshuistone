@@ -387,3 +387,40 @@ D:\SVNN\Web\Website_bigplayerClub\Outsourcing.Service\obj\Debug\Outsourcing.Serv
 D:\SVNN\Web\Website_bigplayerClub\Outsourcing.Service\obj\Debug\Outsourcing.Service.csproj.CopyComplete
 D:\SVNN\Web\Website_bigplayerClub\Outsourcing.Service\obj\Debug\Outsourcing.Service.dll
 D:\SVNN\Web\Website_bigplayerClub\Outsourcing.Service\obj\Debug\Outsourcing.Service.pdb
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Outsourcing.Service.dll.config
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Outsourcing.Service.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Outsourcing.Service.pdb
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\EntityFramework.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\EntityFramework.SqlServer.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Microsoft.AspNet.Identity.Core.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Outsourcing.Core.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Outsourcing.Data.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\System.Web.Mvc.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\System.Web.WebPages.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\PagedList.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\System.Web.Razor.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\System.Web.WebPages.Razor.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Microsoft.Web.Infrastructure.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\System.Web.WebPages.Deployment.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Outsourcing.Core.pdb
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Outsourcing.Core.dll.config
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Outsourcing.Data.pdb
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Outsourcing.Data.dll.config
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\EntityFramework.xml
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\EntityFramework.SqlServer.xml
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Microsoft.AspNet.Identity.Core.xml
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\System.Web.Mvc.xml
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\System.Web.WebPages.xml
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\PagedList.xml
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\System.Web.Razor.xml
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\System.Web.WebPages.Razor.xml
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\bin\System.Web.WebPages.Deployment.xml
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\obj\Debug\Outsourcing.Service.csprojAssemblyReference.cache
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\obj\Debug\Outsourcing.Service.Properties.Resources.resources
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\obj\Debug\Outsourcing.Service.csproj.GenerateResource.cache
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\obj\Debug\Outsourcing.Service.csproj.CoreCompileInputs.cache
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\obj\Debug\Outsourcing.Service.csproj.CopyComplete
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\obj\Debug\Outsourcing.Service.dll
+D:\SVNN\Web Đá Qúy\fengshuistone\Outsourcing.Service\obj\Debug\Outsourcing.Service.pdb

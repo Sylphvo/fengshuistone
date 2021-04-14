@@ -1,8 +1,6 @@
 ﻿using System.Reflection;
-using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
-using Labixa.Common;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Outsourcing.Core.Authentication;
@@ -30,11 +28,11 @@ namespace Labixa
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerHttpRequest();
             builder.RegisterType<DatabaseFactory>().As<IDatabaseFactory>().InstancePerHttpRequest();
 
-            builder.RegisterType<SDKApiFundist>().As<ISDKApiFundist>().InstancePerHttpRequest();
-            builder.RegisterType<SDKApiAdmin>().As<ISDKApiAdmin>().InstancePerHttpRequest();
-            builder.RegisterType<TwoFactAuthAdmin>().As<ITwoFactAuthAdmin>().InstancePerHttpRequest();
-            builder.RegisterType<ConfirmEmail>().As<IConfirmEmail>().InstancePerHttpRequest();
-            builder.RegisterType<Captcha>().As<IValidateCapcha>().InstancePerHttpRequest();
+            //builder.RegisterType<SDKApiFundist>().As<ISDKApiFundist>().InstancePerHttpRequest();
+            //builder.RegisterType<SDKApiAdmin>().As<ISDKApiAdmin>().InstancePerHttpRequest();
+            //builder.RegisterType<TwoFactAuthAdmin>().As<ITwoFactAuthAdmin>().InstancePerHttpRequest();
+            //builder.RegisterType<ConfirmEmail>().As<IConfirmEmail>().InstancePerHttpRequest();
+            //builder.RegisterType<Captcha>().As<IValidateCapcha>().InstancePerHttpRequest();
 
 
             builder.RegisterAssemblyTypes(typeof(BlogRepository).Assembly)
@@ -44,38 +42,38 @@ namespace Labixa
            .Where(t => t.Name.EndsWith("Service"))
            .AsImplementedInterfaces().InstancePerHttpRequest();
 
-            builder.RegisterAssemblyTypes(typeof(SDKApiFundist).Assembly)
-          .Where(t => t.Name.EndsWith("Service"))
-          .AsImplementedInterfaces().InstancePerHttpRequest();
-            builder.RegisterAssemblyTypes(typeof(SDKApiAdmin).Assembly)
-          .Where(t => t.Name.EndsWith("Service"))
-          .AsImplementedInterfaces().InstancePerHttpRequest();
-            builder.RegisterAssemblyTypes(typeof(TwoFactAuthAdmin).Assembly)
-         .Where(t => t.Name.EndsWith("Service"))
-         .AsImplementedInterfaces().InstancePerHttpRequest();
-            builder.RegisterAssemblyTypes(typeof(ConfirmEmail).Assembly)
-         .Where(t => t.Name.EndsWith("Service"))
-         .AsImplementedInterfaces().InstancePerHttpRequest();
+         //   builder.RegisterAssemblyTypes(typeof(SDKApiFundist).Assembly)
+         // .Where(t => t.Name.EndsWith("Service"))
+         // .AsImplementedInterfaces().InstancePerHttpRequest();
+         //   builder.RegisterAssemblyTypes(typeof(SDKApiAdmin).Assembly)
+         // .Where(t => t.Name.EndsWith("Service"))
+         // .AsImplementedInterfaces().InstancePerHttpRequest();
+         //   builder.RegisterAssemblyTypes(typeof(TwoFactAuthAdmin).Assembly)
+         //.Where(t => t.Name.EndsWith("Service"))
+         //.AsImplementedInterfaces().InstancePerHttpRequest();
+         //   builder.RegisterAssemblyTypes(typeof(ConfirmEmail).Assembly)
+         //.Where(t => t.Name.EndsWith("Service"))
+         //.AsImplementedInterfaces().InstancePerHttpRequest();
 
             builder.RegisterAssemblyTypes(typeof(DefaultFormsAuthentication).Assembly)
        .Where(t => t.Name.EndsWith("Authentication"))
        .AsImplementedInterfaces().InstancePerHttpRequest();
-            builder.RegisterAssemblyTypes(typeof(Captcha).Assembly)
-       .Where(t => t.Name.EndsWith("ValidateCapcha"))
-       .AsImplementedInterfaces().InstancePerHttpRequest();
+       //     builder.RegisterAssemblyTypes(typeof(Captcha).Assembly)
+       //.Where(t => t.Name.EndsWith("ValidateCapcha"))
+       //.AsImplementedInterfaces().InstancePerHttpRequest();
 
             builder.Register(c => new UserManager<User>(new UserStore<User>(new OutsourcingEntities())))
                 .As<UserManager<User>>().InstancePerHttpRequest();
             builder.Register(c => new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new OutsourcingEntities())))
                .As<RoleManager<IdentityRole>>().InstancePerHttpRequest();
 
-            builder.RegisterAssemblyTypes(typeof(SDKApiFundist).Assembly)
-           .Where(t => t.Name.EndsWith("Service"))
-           .AsImplementedInterfaces()
-           .InstancePerRequest();
-            builder.RegisterFilterProvider();
-            IContainer container = builder.Build();
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+           // builder.RegisterAssemblyTypes(typeof(SDKApiFundist).Assembly)
+           //.Where(t => t.Name.EndsWith("Service"))
+           //.AsImplementedInterfaces()
+           //.InstancePerRequest();
+           // builder.RegisterFilterProvider();
+           // IContainer container = builder.Build();
+           // DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }
     }
 }
