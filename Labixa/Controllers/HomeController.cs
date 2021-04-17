@@ -18,6 +18,10 @@ namespace Labixa.Controllers
         {
             return View();
         }
+        public ActionResult FAQ()
+        {
+            return View();
+        }
 
     }
 }

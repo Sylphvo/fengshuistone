@@ -14,11 +14,11 @@ namespace Labixa.Controllers
         {
             return View();
         }
-        public ActionResult thongtinsanpham()
+        public ActionResult Information()
         {
             return View();
         }
-        public ActionResult thanhtoan()
+        public ActionResult Deal()
         {
             return View();
         }

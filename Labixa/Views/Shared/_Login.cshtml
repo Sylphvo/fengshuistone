@@ -1,0 +1,29 @@
+﻿<!-- Modal Login -->
+<div class="modal fade text-dark" id="Login" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" >
+            <div class="modal-header" ">
+                <h3  class="modal-title" >Login</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form  method="post" action="/Account/Login">
+                <div class="modal-body">
+                    <div id='username' class='username'>Tài Khoản</div>
+                    <div>
+                        <input type='text' name='username' id='username' class="form-control" required placeholder="Tài Khoản**">
+                    </div>
+                    <div id='password' class='password'>Mật Khẩu</div>
+                    <div>
+                        <input type='password' name='password' id='password' class="form-control" required placeholder="Mật Khẩu**">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button data-toggle="modal" data-target="#Register" type="button" class="btn btn-primary">Đăng Ký</button>
+                    <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

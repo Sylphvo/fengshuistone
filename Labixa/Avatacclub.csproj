@@ -227,11 +227,21 @@
     <Compile Include="Areas\Admin\ViewModel\ProductFormModel.cs" />
     <Compile Include="Areas\Admin\ViewModel\BlogFormModel.cs" />
     <Compile Include="Areas\Admin\ViewModel\StaffFormModel.cs" />
+    <Compile Include="Common\Captcha.cs" />
+    <Compile Include="Common\CommonFunction.cs" />
+    <Compile Include="Common\ConfirmEmail.cs" />
+    <Compile Include="Common\MessageResponeApi.cs" />
+    <Compile Include="Common\SDKApiAdmin.cs" />
+    <Compile Include="Common\SDKApiFundist.cs" />
+    <Compile Include="Common\TwoFactAuthAdmin.cs" />
+    <Compile Include="Controllers\BaseHomeController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\ShopController.cs" />
+    <Compile Include="Controllers\TaiKhoanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -241,6 +251,7 @@
       <DependentUpon>laibixa.cs</DependentUpon>
     </Compile>
     <Compile Include="Images\Models\AccountViewModels.cs" />
+    <Compile Include="Models\ManageUserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AlbumModels.cs" />
@@ -947,10 +958,9 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Shared\_MenuAuth.cshtml" />
     <Content Include="Views\Shared\_MenuStart.cshtml" />
-    <Content Include="Views\Shop\thongtinsanpham.cshtml" />
-    <Content Include="Views\Shop\thanhtoan.cshtml" />
+    <Content Include="Views\Shop\Information.cshtml" />
+    <Content Include="Views\Shop\Deal.cshtml" />
     <Content Include="Views\Shop\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Home\Blog.cshtml" />
@@ -959,6 +969,13 @@
     <Content Include="Views\Service\Index3.cshtml" />
     <Content Include="Views\Service\Index4.cshtml" />
     <Content Include="Views\Project\Index.cshtml" />
+    <Content Include="Views\Home\FAQ.cshtml" />
+    <Content Include="Views\Pages\Index.cshtml" />
+    <Content Include="Views\Shared\_Login.cshtml" />
+    <Content Include="Views\Shared\_Logout.cshtml" />
+    <Content Include="Views\Shared\_Register.cshtml" />
+    <Content Include="Views\TaiKhoan\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutAuthor.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -970,9 +987,8 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Areas\Admin\Views\Shared\Partial\" />
-    <Folder Include="Common\" />
     <Folder Include="Content\TueDuc\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\BaseHome\" />
     <Folder Include="Views\Transaction\" />
   </ItemGroup>
   <ItemGroup>
